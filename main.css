@@ -68,3 +68,23 @@ a {
 		margin: 0 0 0.5em 0;
 	}
 }
+
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	html {
+		display: flex;
+	}
+	body {
+		flex: 1 1 auto;
+	}
+}
+
+@media (-ms-high-contrast: active) and (max-width: 725px), (-ms-high-contrast: none) and (max-width: 725px) {  
+	body {
+		width: 100%;
+		min-height: 0;
+		align-self: flex-start;
+	}
+	#bio {
+		align-self: stretch;
+	}
+}
