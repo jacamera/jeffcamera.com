@@ -48,6 +48,9 @@ img {
 a {
 	color: white;
 }
+:focus {
+	outline: #ccc auto 1px;
+}
 #picture {
 	margin: 0 1em 0 0;
 }
