@@ -40,11 +40,6 @@ li > small {
 p {
 	margin: 1em 0;
 }
-img {
-	display: block;
-	width: 200px;
-	border: 0.5em solid #222;
-}
 a {
 	color: white;
 }
@@ -53,6 +48,24 @@ a {
 }
 #picture {
 	margin: 0 1em 0 0;
+}
+#picture > img {
+	display: block;
+	width: 200px;
+	border: 0.5em solid #222;
+}
+#social {
+	margin-top: 0.75em;
+	text-align: center;
+}
+#social a {
+	text-decoration: none;
+}
+#social a + a {
+	margin-left: 0.5em;
+}
+#social img {
+	height: 20px;
 }
 #bio {
 	margin: 0 0 0 1em;
