@@ -13,4 +13,4 @@ jobs:
       AWS_DEFAULT_REGION: us-east-1
     steps:
       - uses: actions/checkout@v2
-      - run: aws s3 sync $GITHUB_WORKSPACE s3://jeffcamera.com --exclude ".git/*" --size-only --delete
+      - run: aws s3 sync $GITHUB_WORKSPACE s3://jeffcamera.com --exclude ".git/*" --exclude ".github/*" --size-only --delete
