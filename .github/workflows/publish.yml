@@ -1,0 +1,16 @@
+name: publish
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_ACCESS_KEY_SECRET }}
+      AWS_DEFAULT_REGION: us-east-1
+    steps:
+      - uses: actions/checkout@v2
+      - run: aws s3 sync $GITHUB_WORKSPACE s3://jeffcamera.com --exclude ".git/*" --size-only --delete
