@@ -19,12 +19,9 @@ h1 {
 }
 h2 {
 	font-size: 16pt;
-	margin: 12pt 0;
+	margin: 24pt 0 12pt 0;
 }
-h3 {
-	font-size: 14pt;
-	margin: 12pt 0;
-}
+ol,
 ul {
 	margin: 1em 0;
 	padding: 0 0 0 2em;
@@ -32,9 +29,8 @@ ul {
 li {
 	margin: 0.25em 0;
 }
-li > small {
+small {
 	color: #aaa;
-	margin-left: 0.25em;
 	font-size: 10pt;
 }
 p {
@@ -69,6 +65,20 @@ a {
 }
 #bio {
 	margin: 0 0 0 1em;
+}
+#articles {
+	list-style: none;
+	padding-left: 0;
+}
+#articles a {
+	display: block;
+	margin-bottom: 0.25em;
+}
+#articles li + li {
+	margin-top: 1em;
+}
+#articles small:not(:last-of-type)::after {
+	content: " •";
 }
 
 @media (max-width: 725px) {
