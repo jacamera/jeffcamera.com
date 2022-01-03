@@ -1,7 +1,7 @@
 html {
 	height: 100%;
 	background-color: black;
-	color: white;
+	color: #f6f6f6;
 	font-family: sans-serif;
 	font-size: 12pt;
 }
@@ -41,7 +41,7 @@ p {
 	margin: 1em 0;
 }
 a {
-	color: white;
+	color: #f6f6f6;
 }
 :focus {
 	outline: #ccc auto 1px;
