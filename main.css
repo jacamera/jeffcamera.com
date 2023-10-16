@@ -48,7 +48,7 @@ a {
 #picture > img {
 	display: block;
 	width: 200px;
-	border: 0.5em solid #222;
+	border-radius: 50%;
 }
 #social {
 	margin-top: 0.75em;
