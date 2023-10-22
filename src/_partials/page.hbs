@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="{{asset "/site.css"}}" />
+        <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;," />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf8" />
+        {{^ _debug}}
+        {{> gtag}}
+        {{/ _debug}}
+    </head>
+    <body>
+        {{> @partial-block}}
+    </body>
+</html>

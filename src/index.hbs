@@ -1,0 +1,44 @@
+{{#> page}}
+<div id="picture">
+    <img srcset="{{asset "/images/profile@1x.jpg"}}, {{asset "/images/profile@2x.jpg"}} 2x, {{asset "/images/profile@3x.jpg"}} 3x" src="{{asset "/images/profile@3x.jpg"}}" alt="Profile picture of Jeff Camera." />
+    <div id="social">
+        <a href="https://readup.org/@jeff">
+            <img src="{{asset "/images/social/readup.svg"}}" alt="Readup Logo" />
+        </a>
+        <a href="https://github.com/jacamera">
+            <img src="{{asset "/images/social/github.svg"}}" alt="GitHub Logo" />
+        </a>
+        <a href="https://leetcode.com/jeffcamera">
+            <img src="{{asset "/images/social/leetcode.svg"}}" alt="LeetCode Logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/jeff-camera">
+            <img src="{{asset "/images/social/linkedin.svg"}}" alt="LinkedIn Logo" />
+        </a>
+    </div>
+</div>
+<div id="bio">
+    <h1>Jeff Camera</h1>
+    <p>Full-Stack Software Engineer</p>
+    <p>Currently living in Toms River, NJ</p>
+    <p>Email me at jeff@</p>
+    <p><a href="https://readup.com/@jeff">Read with me on Readup.</a></p>
+    <h2>Articles I've Written</h2>
+    <ol id="articles">
+        <li>
+            <a href="https://blog.readup.org/2021/12/10/how-readup-is-built.html">How Readup is Built</a>
+            <small>2021-12-10</small>
+            <small>An overview of Readup's architecture, from Git repositories to AWS services.</small>
+        </li>
+        <li>
+            <a href="https://blog.readup.org/2021/06/08/how-readup-pays-writers-when-you-read-their-articles.html">How Readup Pays Writers When You Read Their Articles</a>
+            <small>2021-06-08</small>
+            <small>A detailed look at the financial model and technical infrastructure that powers Readup's reader/writer marketplace.</small>
+        </li>
+        <li>
+            <a href="https://blog.readup.org/2020/11/02/how-readup-knows-whether-or-not-youve-read-an-article.html">How Readup Knows Whether or Not You've Read an Article</a>
+            <small>2020-11-02</small>
+            <small>A deep dive into Readup's read-tracking technology.</small>
+        </li>
+    </ol>
+</div>
+{{/ page}}

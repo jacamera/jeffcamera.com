@@ -1,0 +1,23 @@
+{
+  "name": "jeffcamera.com",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacamera/jeffcamera.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacamera/jeffcamera.com/issues"
+  },
+  "homepage": "https://github.com/jacamera/jeffcamera.com#readme",
+  "type": "module",
+  "dependencies": {
+    "handlebars": "4.7.8"
+  }
+}
