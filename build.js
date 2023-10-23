@@ -72,6 +72,30 @@ Handlebars.registerHelper('asset', assetPath => {
     return new Handlebars.SafeString(`${assetPath}?${options.assetVersionKey}=${assetVersion}`);
 });
 
+// Pluralization helper.
+Handlebars.registerHelper('pluralize', (singular, arg1, arg2) => {
+    let count, plural;
+    switch (typeof arg1) {
+        case 'number':
+            count = arg1;
+            plural = singular + 's';
+            break;
+        case 'string':
+            plural = arg1;
+            if (typeof arg2 !== 'number') {
+                throw new Error('Third argument must be a number.');
+            }
+            count = arg2;
+            break;
+        default:
+            throw new Error('Invalid arguments.');
+    }
+    if (count === 1) {
+        return singular;
+    }
+    return typeof plural === 'string' ? plural : singular + 's';
+});
+
 // Global context.
 const globalContext = {
     _debug: options.debug
