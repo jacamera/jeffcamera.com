@@ -1,11 +1,13 @@
 {{#> page}}
 <div id="picture">
     <img srcset="{{asset "/images/profile@1x.jpg"}}, {{asset "/images/profile@2x.jpg"}} 2x, {{asset "/images/profile@3x.jpg"}} 3x" src="{{asset "/images/profile@3x.jpg"}}" alt="Profile picture of Jeff Camera." />
-    <div id="social">
+    <ol>
         {{# socials}}
-        {{> social}}
+        <li>
+            {{> social}}
+        </li>
         {{/ socials}}
-    </div>
+    </ol>
 </div>
 <div id="bio">
     <h1>Jeff Camera</h1>
@@ -13,7 +15,7 @@
     <p>Currently living in Toms River, NJ</p>
     <p>Email me at jeff@</p>
     <h2>Articles I've Written</h2>
-    <ol id="articles">
+    <ol>
         {{# articles}}
         <li>
             {{> article}}
