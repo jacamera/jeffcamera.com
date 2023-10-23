@@ -2,18 +2,9 @@
 <div id="picture">
     <img srcset="{{asset "/images/profile@1x.jpg"}}, {{asset "/images/profile@2x.jpg"}} 2x, {{asset "/images/profile@3x.jpg"}} 3x" src="{{asset "/images/profile@3x.jpg"}}" alt="Profile picture of Jeff Camera." />
     <div id="social">
-        <a href="https://readup.org/@jeff">
-            <img src="{{asset "/images/social/readup.svg"}}" alt="Readup Logo" />
-        </a>
-        <a href="https://github.com/jacamera">
-            <img src="{{asset "/images/social/github.svg"}}" alt="GitHub Logo" />
-        </a>
-        <a href="https://leetcode.com/jeffcamera">
-            <img src="{{asset "/images/social/leetcode.svg"}}" alt="LeetCode Logo" />
-        </a>
-        <a href="https://www.linkedin.com/in/jeff-camera">
-            <img src="{{asset "/images/social/linkedin.svg"}}" alt="LinkedIn Logo" />
-        </a>
+        {{# socials}}
+        {{> social}}
+        {{/ socials}}
     </div>
 </div>
 <div id="bio">
