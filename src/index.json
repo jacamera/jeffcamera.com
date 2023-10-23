@@ -1,3 +1,23 @@
 {
-    "title": "Jeff Camera"
+    "title": "Jeff Camera",
+    "articles": [
+        {
+            "title": "How Readup is Built",
+            "date": "2021-12-10",
+            "description": "An overview of Readup's architecture, from Git repositories to AWS services.",
+            "url": "https://blog.readup.org/2021/12/10/how-readup-is-built.html"
+        },
+        {
+            "title": "How Readup Pays Writers When You Read Their Articles",
+            "date": "2021-06-08",
+            "description": "A detailed look at the financial model and technical infrastructure that powers Readup's reader/writer marketplace.",
+            "url": "https://blog.readup.org/2021/06/08/how-readup-pays-writers-when-you-read-their-articles.html"
+        },
+        {
+            "title": "How Readup Knows Whether or Not You've Read an Article",
+            "date": "2020-11-02",
+            "description": "A deep dive into Readup's read-tracking technology.",
+            "url": "https://blog.readup.org/2020/11/02/how-readup-knows-whether-or-not-youve-read-an-article.html"
+        }
+    ]
 }
