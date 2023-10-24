@@ -72,6 +72,21 @@ Handlebars.registerHelper('asset', assetPath => {
     return new Handlebars.SafeString(`${assetPath}?${options.assetVersionKey}=${assetVersion}`);
 });
 
+// List helper.
+Handlebars.registerHelper('list', items => {
+    let list = '';
+    if (!items || !items.length)
+        return list;
+    list = items[0];
+    for (var i = 1; i < items.length - 1; i++) {
+        list += ', ' + items[i];
+    }
+    if (items.length > 1) {
+        list += ' & ' + items[items.length - 1];
+    }
+    return list;
+});
+
 // Pluralization helper.
 Handlebars.registerHelper('pluralize', (singular, arg1, arg2) => {
     let count, plural;
