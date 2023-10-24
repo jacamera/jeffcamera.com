@@ -9,50 +9,55 @@
         {{/ website}}
         <small class="description">{{description}}</small>
     </span>
-    <div class="body">
-        <span class="rating" title="{{rating}} {{pluralize "star" rating}}">
-            <span class="stars">
-                {{# stars}}
-                <svg class="star" width="32" height="32">
-                    {{# partial}}
-                    <defs>
-                        <linearGradient id="{{id}}">
-                            <stop offset="{{percent}}%" stop-color="var(--star-active)"></stop>
-                            <stop offset="{{percent}}%" stop-color="var(--star-inactive)"></stop>
-                        </linearGradient>
-                    </defs>
-                    <use href="#icon-star" fill="url(#{{id}})"></use>
-                    {{/ partial}}
-                    {{^ partial}}
-                    {{# if isFull}}
-                    <use href="#icon-star" fill="var(--star-active)"></use>
-                    {{else}}
-                    <use href="#icon-star" fill="var(--star-inactive)"></use>
-                    {{/ if}}
-                    {{/ partial}}
-                </svg>
-                {{/ stars}}
-            </span>
-            • {{reviewCount}} {{pluralize "review" reviewCount}} •
+    {{# stores}}
+    <div class="stores">
+        <span class="stars" title="{{rating}} {{pluralize "star" rating}}">
+            {{# stars}}
+            <svg class="star" width="32" height="32">
+                {{# partial}}
+                <defs>
+                    <linearGradient id="{{id}}">
+                        <stop offset="{{percent}}%" stop-color="var(--star-active)"></stop>
+                        <stop offset="{{percent}}%" stop-color="var(--star-inactive)"></stop>
+                    </linearGradient>
+                </defs>
+                <use href="#icon-star" fill="url(#{{id}})"></use>
+                {{/ partial}}
+                {{^ partial}}
+                {{# if isFull}}
+                <use href="#icon-star" fill="var(--star-active)"></use>
+                {{else}}
+                <use href="#icon-star" fill="var(--star-inactive)"></use>
+                {{/ if}}
+                {{/ partial}}
+            </svg>
+            {{/ stars}}
         </span>
-        <span class="stores">
-            {{# stores}}
+        <span class="reviews">{{reviewCount}} {{pluralize "review" reviewCount}}</span>
+        <span class="links">
+            {{# links}}
             {{# apple}}
-            <a href="{{url}}" title="App Store">{{platforms}}</a>
+            <img src="{{asset "/images/projects/apple.svg"}}" alt="Apple Logo" /> <a href="{{url}}" title="App Store">{{list platforms}}</a>
             {{/ apple}}
             {{# chrome}}
-            <a href="{{.}}" title="Chrome Extension">Chrome</a>
+            <img src="{{asset "/images/projects/chrome.svg"}}" alt="Chrome Logo" /> <a href="{{.}}" title="Chrome Extension">Chrome</a>
             {{/ chrome}}
             {{# firefox}}
-            <a href="{{.}}" title="Firefox Add-on">Firefox</a>
+            <img src="{{asset "/images/projects/firefox.svg"}}" alt="Firefox Logo" /> <a href="{{.}}" title="Firefox Add-on">Firefox</a>
             {{/ firefox}}
+            {{# safari}}
+            <img src="{{asset "/images/projects/safari.svg"}}" alt="Safari Logo" /> <a href="{{.}}" title="Safari Extension">Safari</a>
+            {{/ safari}}
             {{# edge}}
-            <a href="{{.}}" title="Edge Add-on">Edge</a>
+            <img src="{{asset "/images/projects/edge.svg"}}" alt="Edge Logo" /> <a href="{{.}}" title="Edge Add-on">Edge</a>
             {{/ edge}}
-            {{/ stores}}
+            {{/ links}}
         </span>
-        {{# github}}
-        <a class="source" href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
-        {{/ github}}
     </div>
+    {{/ stores}}
+    {{# github}}
+    <div class="source">
+        <a href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
+    </div>
+    {{/ github}}
 </div>
