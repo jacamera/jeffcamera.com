@@ -57,20 +57,32 @@ a {
 #picture > ol > li + li {
     margin-left: 0.5em;
 }
-#bio {
+#content {
     margin: 0 0 0 1em;
 }
-#bio > ol > li + li {
+#content > ol > li + li {
     margin-top: 1em;
 }
 #picture > ol,
-#bio > ol {
+#content > ol {
     list-style: none;
     padding-left: 0;
 }
 #picture > ol > li,
-#bio > ol > li {
+#content > ol > li {
     margin: 0;
+}
+#bio li {
+    display: flex;
+}
+#bio .icon {
+    fill: #aaa;
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5em;
+}
+#content > #bio > li + li {
+    margin-top: 0.5em;
 }
 
 @media (max-width: 725px) {
