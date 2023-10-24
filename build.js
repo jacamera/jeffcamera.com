@@ -96,6 +96,11 @@ Handlebars.registerHelper('pluralize', (singular, arg1, arg2) => {
     return typeof plural === 'string' ? plural : singular + 's';
 });
 
+// String trim helper.
+Handlebars.registerHelper('trim-start', (text, trim) => {
+    return text.substring(trim.length);
+});
+
 // Global context.
 const globalContext = {
     _debug: options.debug
