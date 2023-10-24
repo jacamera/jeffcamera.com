@@ -148,6 +148,16 @@ a {
     display: block;
     margin-bottom: 0.25rem;
 }
+.project .body .stars {
+    --star-active: #fed94b;
+    --star-inactive: #999;
+    filter: grayscale(0.25);
+    cursor: default;
+}
+.project .body .stars .star {
+    width: 16px;
+    height: 16px;
+}
 
 .social {
     text-decoration: none;

@@ -101,6 +101,34 @@ Handlebars.registerHelper('trim-start', (text, trim) => {
     return text.substring(trim.length);
 });
 
+// Star rating helper.
+let starGradientId = 0;
+Handlebars.registerHelper('stars', function (options) {
+    let html = '';
+    for (let i = 0; i < 5; i++) {
+        const value = Math.min(Math.max(this.rating - i, 0), 1);
+        let context;
+        switch (value) {
+            case 0:
+                context = { isFull: false };
+                break;
+            case 1:
+                context = { isFull: true };
+                break;
+            default:
+                context = {
+                    partial: {
+                        id: 'star-' + starGradientId++,
+                        percent: Math.round(value * 100)
+                    }
+                };
+                break;
+        }
+        html += options.fn(context);
+    }
+    return html;
+});
+
 // Global context.
 const globalContext = {
     _debug: options.debug

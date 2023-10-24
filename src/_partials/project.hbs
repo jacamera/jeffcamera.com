@@ -13,7 +13,31 @@
         {{# github}}
         <a class="source" href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
         {{/ github}}
-        <span class="rating">{{rating}} stars ({{reviewCount}} {{pluralize "review" reviewCount}})</span>
+        <span class="rating" title="{{rating}} {{pluralize "star" rating}}">
+            <span class="stars">
+                {{# stars}}
+                <svg class="star" width="32" height="32">
+                    {{# partial}}
+                    <defs>
+                        <linearGradient id="{{id}}">
+                            <stop offset="{{percent}}%" stop-color="var(--star-active)"></stop>
+                            <stop offset="{{percent}}%" stop-color="var(--star-inactive)"></stop>
+                        </linearGradient>
+                    </defs>
+                    <use href="#icon-star" fill="url(#{{id}})"></use>
+                    {{/ partial}}
+                    {{^ partial}}
+                    {{# if isFull}}
+                    <use href="#icon-star" fill="var(--star-active)"></use>
+                    {{else}}
+                    <use href="#icon-star" fill="var(--star-inactive)"></use>
+                    {{/ if}}
+                    {{/ partial}}
+                </svg>
+                {{/ stars}}
+            </span>
+            • {{reviewCount}} {{pluralize "review" reviewCount}} •
+        </span>
         <span class="stores">
             {{# stores}}
             {{# apple}}
