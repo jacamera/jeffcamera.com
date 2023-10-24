@@ -128,7 +128,7 @@ a {
 .project .logo {
     grid-area: logo;
     height: 32px;
-    filter: grayscale(1);
+    filter: grayscale(0.5);
 }
 .project .header {
     grid-area: header;
