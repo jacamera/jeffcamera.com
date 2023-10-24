@@ -10,9 +10,6 @@
         <small class="description">{{description}}</small>
     </span>
     <div class="body">
-        {{# github}}
-        <a class="source" href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
-        {{/ github}}
         <span class="rating" title="{{rating}} {{pluralize "star" rating}}">
             <span class="stars">
                 {{# stars}}
@@ -54,5 +51,8 @@
             {{/ edge}}
             {{/ stores}}
         </span>
+        {{# github}}
+        <a class="source" href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
+        {{/ github}}
     </div>
 </div>

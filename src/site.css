@@ -144,10 +144,6 @@ a {
 .project .body a {
     color: #aaa;
 }
-.project .body .source {
-    display: block;
-    margin-bottom: 0.25rem;
-}
 .project .body .stars {
     --star-active: #fed94b;
     --star-inactive: #999;
@@ -157,6 +153,10 @@ a {
 .project .body .stars .star {
     width: 16px;
     height: 16px;
+}
+.project .body .source {
+    display: block;
+    margin-top: 0.25rem;
 }
 
 .social {
