@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg125"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="extension\icon-16.png"
+   inkscape:export-xdpi="6"
+   inkscape:export-ydpi="6"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1178">Icon</title>
+  <sodipodi:namedview
+     id="namedview127"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.71238679"
+     inkscape:cx="-300.39861"
+     inkscape:cy="117.91347"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g18537" />
+  <defs
+     id="defs122" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#666666;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1174"
+       width="256"
+       height="256"
+       x="0"
+       y="0" />
+    <g
+       id="g18537"
+       transform="translate(-0.91998291,0.66539001)">
+      <rect
+         style="fill:#404040;fill-opacity:1;stroke:none;stroke-width:1.97014;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect181-3"
+         width="200"
+         height="92"
+         x="-228.91998"
+         y="147.33461"
+         rx="46"
+         transform="scale(-1,1)" />
+      <circle
+         style="fill:#ffa116;fill-opacity:1;stroke:none;stroke-width:1.79972;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path341-9"
+         cx="-74.919983"
+         cy="193.33461"
+         transform="scale(-1,1)"
+         r="36" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:122.667px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';letter-spacing:0px;word-spacing:0px;fill:#dddddd;fill-opacity:1;stroke:none"
+       x="26.835661"
+       y="116.63304"
+       id="text3174"><tspan
+         sodipodi:role="line"
+         id="tspan3172"
+         x="26.835661"
+         y="116.63304"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:122.667px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';fill:#dddddd;fill-opacity:1">&lt;/&gt;</tspan></text>
+  </g>
+  <metadata
+     id="metadata2023">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

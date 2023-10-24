@@ -115,6 +115,40 @@ a {
     content: " •";
 }
 
+.project {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+        "logo header"
+        "body body";
+    column-gap: 0.5em;
+    row-gap: 0.25em;
+}
+.project .logo {
+    grid-area: logo;
+    height: 32px;
+    filter: grayscale(1);
+}
+.project .header {
+    grid-area: header;
+}
+.project .header .name {
+    display: block;
+}
+.project .body {
+    grid-area: body;
+    font-size: 10pt;
+    color: #aaa;
+}
+.project .body a {
+    color: #aaa;
+}
+.project .body .source {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
 .social {
     text-decoration: none;
 }

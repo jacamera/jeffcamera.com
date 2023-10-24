@@ -1,0 +1,34 @@
+<div class="project">
+    <img class="logo" src="{{asset image}}" alt="{{name}} Logo" />
+    <span class="header">
+        {{# website}}
+        <a class="name" href="{{.}}" title="Website">{{../name}}</a>
+        {{/ website}}
+        {{^ website}}
+        <span class="name">{{name}}</span>
+        {{/ website}}
+        <small class="description">{{description}}</small>
+    </span>
+    <div class="body">
+        {{# github}}
+        <a class="source" href="{{.}}" title="Source Code">{{trim-start . "https://"}}</a>
+        {{/ github}}
+        <span class="rating">{{rating}} stars ({{reviewCount}} {{pluralize "review" reviewCount}})</span>
+        <span class="stores">
+            {{# stores}}
+            {{# apple}}
+            <a href="{{url}}" title="App Store">{{platforms}}</a>
+            {{/ apple}}
+            {{# chrome}}
+            <a href="{{.}}" title="Chrome Extension">Chrome</a>
+            {{/ chrome}}
+            {{# firefox}}
+            <a href="{{.}}" title="Firefox Add-on">Firefox</a>
+            {{/ firefox}}
+            {{# edge}}
+            <a href="{{.}}" title="Edge Add-on">Edge</a>
+            {{/ edge}}
+            {{/ stores}}
+        </span>
+    </div>
+</div>

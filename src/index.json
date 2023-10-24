@@ -22,6 +22,50 @@
             "image": "/images/social/linkedin.svg"
         }
     ],
+    "projects": [
+        {
+            "name": "Readup",
+            "description": "A social reading platform that respects your time and rewards your attention.",
+            "image": "/images/projects/readup.svg",
+            "rating": 4.7,
+            "reviewCount": 27,
+            "website": "https://readup.org",
+            "github": "https://github.com/reallyreadit",
+            "stores": {
+                "apple": {
+                    "url": "https://apps.apple.com/us/app/readup-social-reading/id1441825432",
+                    "platforms": ["iOS", "macOS", "Safari"]
+                },
+                "chrome": "https://chrome.google.com/webstore/detail/readup/mkeiglkfdfamdjehidenkklibndmljfi",
+                "firefox": "https://addons.mozilla.org/en-US/firefox/addon/readup/",
+                "edge": "https://microsoftedge.microsoft.com/addons/detail/readup/nnnlnihiejbbkikldbfeeefljhpplhcm"
+            }
+        },
+        {
+            "name": "Disable YouTube Watch Later Autoplay",
+            "description": "Watch individual videos that you saved for later without autoplaying all of them.",
+            "image": "/images/projects/disable-youtube-watch-later-autoplay.svg",
+            "rating": 4.8,
+            "reviewCount": 14,
+            "github": "https://github.com/jacamera/disable-youtube-watch-later-autoplay",
+            "stores": {
+                "chrome": "https://chrome.google.com/webstore/detail/disable-youtube-watch-lat/pipapjplioodfcahamejlgfloniakbpa",
+                "firefox": "https://addons.mozilla.org/en-US/firefox/addon/disable-youtube-wl-autoplay/"
+            }
+        },
+        {
+            "name": "Toggle LeetCode Syntax Highlighting",
+            "description": "Practice writing code on LeetCode without the help of syntax highlighting.",
+            "image": "/images/projects/toggle-leetcode-syntax-highlighting.svg",
+            "rating": 5,
+            "reviewCount": 1,
+            "github": "https://github.com/jacamera/toggle-leetcode-syntax-highlighting",
+            "stores": {
+                "chrome": "https://chrome.google.com/webstore/detail/toggle-leetcode-syntax-hi/ikcblehlkigjhjookmolcdhehlamnbmp",
+                "firefox": "https://addons.mozilla.org/en-US/firefox/addon/leetcode-syntax-highlighting/"
+            }
+        }
+    ], 
     "articles": [
         {
             "title": "How Readup is Built",

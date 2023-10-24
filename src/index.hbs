@@ -14,6 +14,14 @@
     <p>Full-Stack Software Engineer</p>
     <p>Currently living in Toms River, NJ</p>
     <p>Email me at jeff@</p>
+    <h2>Projects</h2>
+    <ol>
+        {{# projects}}
+        <li>
+            {{> project}}
+        </li>
+        {{/ projects}}
+    </ol>
     <h2>Articles I've Written</h2>
     <ol>
         {{# articles}}
