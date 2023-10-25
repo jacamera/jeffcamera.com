@@ -160,15 +160,13 @@ a {
     filter: grayscale(0.25);
     cursor: default;
 }
-.project .stores .links {
-    display: flex;
+.project .stores .links a {
+    display: inline-flex;
     align-items: center;
 }
-.project .stores .links img {
-    margin: 0 0.25rem 0 0.5rem;
-}
-.project .stores .links img:first-child {
-    margin-left: 0;
+.project .stores .links a + a,
+.project .stores .links span {
+    margin-left: 0.25rem;
 }
 .project .stores .stars + .reviews::before,
 .project .stores * + .links::before {

@@ -37,19 +37,34 @@
         <span class="links">
             {{# links}}
             {{# apple}}
-            <img src="{{asset "/images/projects/apple.svg"}}" alt="Apple Logo" /> <a href="{{url}}" title="App Store">{{list platforms}}</a>
+            <a href="{{url}}" title="App Store">
+                <img src="{{asset "/images/projects/apple.svg"}}" alt="Apple Logo" />
+                <span>{{list platforms}}</span>
+            </a>
             {{/ apple}}
             {{# chrome}}
-            <img src="{{asset "/images/projects/chrome.svg"}}" alt="Chrome Logo" /> <a href="{{.}}" title="Chrome Extension">Chrome</a>
+            <a href="{{.}}" title="Chrome Extension">
+                <img src="{{asset "/images/projects/chrome.svg"}}" alt="Chrome Logo" />
+                <span>Chrome</span>
+            </a>
             {{/ chrome}}
             {{# firefox}}
-            <img src="{{asset "/images/projects/firefox.svg"}}" alt="Firefox Logo" /> <a href="{{.}}" title="Firefox Add-on">Firefox</a>
+            <a href="{{.}}" title="Firefox Add-on">
+                <img src="{{asset "/images/projects/firefox.svg"}}" alt="Firefox Logo" />
+                <span>Firefox</span>
+            </a>
             {{/ firefox}}
             {{# safari}}
-            <img src="{{asset "/images/projects/safari.svg"}}" alt="Safari Logo" /> <a href="{{.}}" title="Safari Extension">Safari</a>
+            <a href="{{.}}" title="Safari Extension">
+                <img src="{{asset "/images/projects/safari.svg"}}" alt="Safari Logo" />
+                <span>Safari</span>
+            </a>
             {{/ safari}}
             {{# edge}}
-            <img src="{{asset "/images/projects/edge.svg"}}" alt="Edge Logo" /> <a href="{{.}}" title="Edge Add-on">Edge</a>
+            <a href="{{.}}" title="Edge Add-on">
+                <img src="{{asset "/images/projects/edge.svg"}}" alt="Edge Logo" />
+                <span>Edge</span>
+            </a>
             {{/ edge}}
             {{/ links}}
         </span>
