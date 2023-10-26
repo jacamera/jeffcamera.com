@@ -11,26 +11,26 @@ body {
 }
 h1 {
     font-size: 20pt;
-    margin: 24pt 0 12pt 0;
+    margin: 2rem 0 1rem 0;
 }
 h2 {
     font-size: 16pt;
-    margin: 24pt 0 12pt 0;
+    margin: 2rem 0 1rem 0;
 }
 ol,
 ul {
-    margin: 1em 0;
-    padding: 0 0 0 2em;
+    margin: 1rem 0;
+    padding: 0 0 0 2rem;
 }
 li {
-    margin: 0.25em 0;
+    margin: 0.25rem 0;
 }
 small {
     color: #aaa;
     font-size: 10pt;
 }
 p {
-    margin: 1em 0;
+    margin: 1rem 0;
 }
 a {
     color: #f6f6f6;
@@ -78,13 +78,13 @@ a {
     display: flex;
 }
 #index #stats > li + li {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 #index #stats .icon {
     fill: #aaa;
     width: 16px;
     height: 16px;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 #index #profile {
     grid-area: profile;
@@ -101,7 +101,7 @@ a {
     justify-content: center;
 }
 #index #socials > li + li {
-    margin-left: 0.5em;
+    margin-left: 0.5rem;
 }
 #index #lists {
     grid-area: lists;
@@ -111,7 +111,7 @@ a {
     padding-right: 2rem;
 }
 #index #lists > ol > li + li {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 @media (max-width: 899px) {
     #index #lists .project .stores .links span {
@@ -153,7 +153,7 @@ a {
 
 .article a {
     display: block;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25rem;
 }
 .article small:not(:last-of-type)::after {
     content: " •";
@@ -167,8 +167,8 @@ a {
         "logo description"
         "stores stores"
         "source source";
-    column-gap: 0.5em;
-    row-gap: 0.25em;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
 }
 .project .logo {
     grid-area: logo;
@@ -243,7 +243,7 @@ a {
             "description description"
             "stores stores"
             "source source";
-        column-gap: 0.4em;
+        column-gap: 0.4rem;
     }
     .project .logo {
         height: 24px;
