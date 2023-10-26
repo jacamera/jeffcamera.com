@@ -6,16 +6,12 @@ html {
     font-size: 12pt;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
     margin: 0;
-    padding: 0 2em;
+    padding: 0;
 }
 h1 {
     font-size: 20pt;
-    margin: 12pt 0;
+    margin: 24pt 0 12pt 0;
 }
 h2 {
     font-size: 16pt;
@@ -42,80 +38,116 @@ a {
 :focus {
     outline: #ccc auto 1px;
 }
-#picture {
-    margin: 0 1em 0 0;
+
+#index {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "bio lists"
+        "profile lists";
+    height: 100vh;
+    column-gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
 }
-#picture > img {
-    display: block;
-    width: 200px;
-    border-radius: 50%;
-}
-#picture > ol {
-    display: flex;
-    justify-content: center;
-}
-#picture > ol > li + li {
-    margin-left: 0.5em;
-}
-#content {
-    margin: 0 0 0 1em;
-}
-#content > ol > li + li {
-    margin-top: 1em;
-}
-#picture > ol,
-#content > ol {
+#index #bio > ol,
+#index #profile > ol,
+#index #lists > ol {
     list-style: none;
     padding-left: 0;
 }
-#picture > ol > li,
-#content > ol > li {
+#index #bio > ol > li,
+#index #profile > ol > li,
+#index #lists > ol > li {
     margin: 0;
 }
-#bio li {
+#index #bio,
+#index #profile {
+    width: max-content;
+    justify-self: center;
+    overflow: hidden;
+    padding-left: 2rem;
+}
+#index #bio {
+    grid-area: bio;
+    align-self: end;
+}
+#index #stats > li {
     display: flex;
 }
-#bio .icon {
+#index #stats > li + li {
+    margin-top: 0.5em;
+}
+#index #stats .icon {
     fill: #aaa;
     width: 16px;
     height: 16px;
     margin-right: 0.5em;
 }
-#content > #bio > li + li {
-    margin-top: 0.5em;
+#index #profile {
+    grid-area: profile;
+    align-self: start;
 }
-
-@media (max-width: 725px) {
-    body {
-        flex-flow: column-reverse;
-        justify-content: flex-end;
-        padding: 1em;
-    }
-    #picture {
-        margin: 0.5em 0 0 0;
-    }
-    #bio {
-        margin: 0 0 0.5em 0;
+#index #profile > img {
+    display: block;
+    width: 200px;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+}
+#index #socials {
+    display: flex;
+    justify-content: center;
+}
+#index #socials > li + li {
+    margin-left: 0.5em;
+}
+#index #lists {
+    grid-area: lists;
+    align-self: center;
+    max-height: 100vh;
+    overflow: auto;
+    padding-right: 2rem;
+}
+#index #lists > ol > li + li {
+    margin-top: 1em;
+}
+@media (max-width: 899px) {
+    #index #lists .project .stores .links span {
+        display: none;
     }
 }
-
-@media (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-    html {
-        display: flex;
+@media (max-width: 849px) {
+    #index {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "bio"
+            "lists"
+            "profile";
+        height: auto;
+        padding: 0 1.5rem;
     }
-    body {
-        flex: 1 1 auto;
+    #index #bio {
+        justify-self: start;
+        padding-left: 0;
     }
-}
-
-@media (-ms-high-contrast: active) and (max-width: 725px), (-ms-high-contrast: none) and (max-width: 725px) {  
-    body {
-        width: 100%;
-        min-height: 0;
-        align-self: flex-start;
+    #index #bio ol {
+        margin-bottom: 0;
     }
-    #bio {
-        align-self: stretch;
+    #index #lists {
+        max-height: none;
+        padding-right: 0;
+    }
+    #index #profile {
+        padding-left: 0;
+    }
+    #index #profile > img {
+        margin-top: 2rem;
+    }
+    #index #profile > ol {
+        margin-bottom: 2rem;
     }
 }
 

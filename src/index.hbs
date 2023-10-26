@@ -1,42 +1,46 @@
 {{#> page}}
-<div id="picture">
-    <img srcset="{{asset "/images/profile@1x.jpg"}}, {{asset "/images/profile@2x.jpg"}} 2x, {{asset "/images/profile@3x.jpg"}} 3x" src="{{asset "/images/profile@3x.jpg"}}" alt="Profile picture of Jeff Camera." />
-    <ol>
-        {{# socials}}
-        <li>
-            {{> social}}
-        </li>
-        {{/ socials}}
-    </ol>
-</div>
-<div id="content">
-    <h1>Jeff Camera</h1>
-    <ol id="bio">
-        <li>
-            {{> icon "hammer"}} Full-Stack Software Engineer
-        </li>
-        <li>
-            {{> icon "location"}} Toms River, NJ
-        </li>
-        <li>
-            {{> icon "envelope"}} jeff@
-        </li>
-    </ol>
-    <h2>Projects</h2>
-    <ol>
-        {{# projects}}
-        <li>
-            {{> project}}
-        </li>
-        {{/ projects}}
-    </ol>
-    <h2>Articles I've Written</h2>
-    <ol>
-        {{# articles}}
-        <li>
-            {{> article}}
-        </li>
-        {{/ articles}}
-    </ol>
+<div id="index">
+    <div id="bio">
+        <h1>Jeff Camera</h1>
+        <ol id="stats">
+            <li>
+                {{> icon "hammer"}} Full-Stack Software Engineer
+            </li>
+            <li>
+                {{> icon "location"}} Toms River, NJ
+            </li>
+            <li>
+                {{> icon "envelope"}} jeff@
+            </li>
+        </ol>
+    </div>
+    <div id="profile">
+        <img srcset="{{asset "/images/profile@1x.jpg"}}, {{asset "/images/profile@2x.jpg"}} 2x, {{asset "/images/profile@3x.jpg"}} 3x" src="{{asset "/images/profile@3x.jpg"}}" alt="Profile picture of Jeff Camera." />
+        <ol id="socials">
+            {{# socials}}
+            <li>
+                {{> social}}
+            </li>
+            {{/ socials}}
+        </ol>
+    </div>
+    <div id="lists">
+        <h2>Projects</h2>
+        <ol>
+            {{# projects}}
+            <li>
+                {{> project}}
+            </li>
+            {{/ projects}}
+        </ol>
+        <h2>Articles I've Written</h2>
+        <ol>
+            {{# articles}}
+            <li>
+                {{> article}}
+            </li>
+            {{/ articles}}
+        </ol>
+    </div>
 </div>
 {{/ page}}
