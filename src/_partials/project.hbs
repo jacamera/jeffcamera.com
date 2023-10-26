@@ -1,14 +1,12 @@
 <div class="project">
     <img class="logo" src="{{asset image}}" alt="{{name}} Logo" />
-    <span class="header">
-        {{# website}}
-        <a class="name" href="{{.}}" title="Website">{{../name}}</a>
-        {{/ website}}
-        {{^ website}}
-        <span class="name">{{name}}</span>
-        {{/ website}}
-        <small class="description">{{description}}</small>
-    </span>
+    {{# website}}
+    <a class="name" href="{{.}}" title="Website">{{../name}}</a>
+    {{/ website}}
+    {{^ website}}
+    <span class="name">{{name}}</span>
+    {{/ website}}
+    <small class="description">{{description}}</small>
     {{# stores}}
     <div class="stores">
         <span class="stars" title="{{rating}} {{pluralize "star" rating}}">
@@ -33,7 +31,7 @@
             </svg>
             {{/ stars}}
         </span>
-        <span class="reviews">{{reviewCount}} {{pluralize "review" reviewCount}}</span>
+        <span class="reviews">{{reviewCount}}<span class="text"> {{pluralize "review" reviewCount}}</span></span>
         <span class="links">
             {{# links}}
             {{# apple}}

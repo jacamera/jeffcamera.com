@@ -129,10 +129,10 @@ a {
 
 .project {
     display: grid;
-    grid-template-columns: min-content auto;
-    grid-template-rows: min-content auto auto;
+    grid-template-columns: min-content 1fr;
     grid-template-areas:
-        "logo header"
+        "logo name"
+        "logo description"
         "stores stores"
         "source source";
     column-gap: 0.5em;
@@ -143,11 +143,16 @@ a {
     height: 32px;
     filter: grayscale(0.5);
 }
-.project .header {
-    grid-area: header;
+.project .name {
+    grid-area: name;
+    align-self: end;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.project .header .name {
-    display: block;
+.project .description {
+    grid-area: description;
+    align-self: start;
 }
 .project .stores {
     grid-area: stores;
@@ -170,11 +175,14 @@ a {
 }
 .project .stores .stars + .reviews::before,
 .project .stores * + .links::before {
-    content: "•";
-    margin: 0 0.25rem;
+    content: "";
+    margin: 0 0.3rem;
 }
 .project .source {
     grid-area: source;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .project .stores,
 .project .source {
@@ -189,6 +197,33 @@ a {
 .project .stores .links img {
     width: 16px;
     height: 16px;
+}
+@media (max-width: 619px) {
+    .project .stores .links span {
+        display: none;
+    }
+}
+@media (max-width: 599px) {
+    .project {
+        grid-template-rows: min-content auto auto auto;
+        grid-template-areas:
+            "logo name"
+            "description description"
+            "stores stores"
+            "source source";
+        column-gap: 0.4em;
+    }
+    .project .logo {
+        height: 24px;
+    }
+    .project .name {
+        align-self: center;
+    }
+}
+@media (max-width: 359px) {
+    .project .stores .reviews .text {
+        display: none;
+    }
 }
 
 .social {
