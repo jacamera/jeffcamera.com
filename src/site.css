@@ -194,7 +194,7 @@ a {
 .project .stores .stars {
     --star-active: #fed94b;
     --star-inactive: #999;
-    filter: grayscale(0.25);
+    filter: grayscale(0.5);
     cursor: default;
 }
 .project .stores .links a {
