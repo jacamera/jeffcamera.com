@@ -41,6 +41,41 @@
             </li>
             {{/ posts}}
         </ol>
+        <h2>Recommended</h2>
+        {{# recommended}}
+        <h3>Fiction</h3>
+        <ol>
+            {{# fiction}}
+            <li>
+                {{> article}}
+            </li>
+            {{/ fiction}}
+        </ol>
+        <h3>Essays</h3>
+        <ol>
+            {{# essays}}
+            <li>
+                {{> article}}
+            </li>
+            {{/ essays}}
+        </ol>
+        <h3>Features</h3>
+        <ol>
+            {{# features}}
+            <li>
+                {{> article}}
+            </li>
+            {{/ features}}
+        </ol>
+        <h3>Opinion</h3>
+        <ol>
+            {{# opinion}}
+            <li>
+                {{> article}}
+            </li>
+            {{/ opinion}}
+        </ol>
+        {{/ recommended}}
     </div>
 </div>
 {{/ page}}

@@ -92,5 +92,87 @@
             "description": "A deep dive into Readup's read-tracking technology.",
             "url": "https://blog.readup.org/2020/11/02/how-readup-knows-whether-or-not-youve-read-an-article.html"
         }
-    ]
+    ],
+    "recommended": {
+        "fiction": [
+            {
+                "title": "The Truth of Fact, the Truth of Feeling",
+                "author": "Ted Chiang",
+                "publisher": "Subterranean Press",
+                "url": "https://web.archive.org/web/20140222103103/http://subterraneanpress.com/magazine/fall_2013/the_truth_of_fact_the_truth_of_feeling_by_ted_chiang"
+            },
+            {
+                "title": "It’s Time to Pay the Piper",
+                "author": "Sabrina Orah Mark",
+                "publisher": "The Paris Review",
+                "url": "https://www.theparisreview.org/blog/2020/10/07/its-time-to-pay-the-piper/"
+            },
+            {
+                "title": "A Report to an Academy",
+                "author": "Franz Kafka",
+                "publisher": "Words Without Borders",
+                "url": "https://www.wordswithoutborders.org/article/a-report-to-an-academy"
+            }
+        ],
+        "essays": [
+            {
+                "title": "What Does Any of This Have To Do with Physics?",
+                "author": "Bob Henderson",
+                "publisher": "Nautilus",
+                "url": "https://nautil.us/what-does-any-of-this-have-to-do-with-physics-236309/"
+            },
+            {
+                "title": "Lost in the Meritocracy",
+                "author": "Walter Kirn",
+                "publisher": "The Atlantic",
+                "url": "http://www.theatlantic.com/magazine/archive/2005/01/lost-in-the-meritocracy/3672/"
+            },
+            {
+                "title": "Uncanny Valley",
+                "author": "Anna Wiener",
+                "publisher": "n+1",
+                "url": "https://www.nplusonemag.com/issue-25/on-the-fringe/uncanny-valley/"
+            }
+        ],
+        "features": [
+            {
+                "title": "The Jungle Prince of Delhi",
+                "author": "Ellen Barry",
+                "publisher": "The New York Times",
+                "url": "https://www.nytimes.com/2019/11/22/world/asia/the-jungle-prince-of-delhi.html"
+            },
+            {
+                "title": "The Unravelling of a Dancer",
+                "author": "Rachel Aviv",
+                "publisher": "The New Yorker",
+                "url": "https://www.newyorker.com/magazine/2020/04/06/the-unravelling-of-a-dancer"
+            },
+            {
+                "title": "The Lonely Death of George Bell",
+                "author": "N. R. Kleinfield",
+                "publisher": "The New York Times",
+                "url": "https://www.nytimes.com/2015/10/18/nyregion/dying-alone-in-new-york-city.html"
+            }
+        ],
+        "opinion": [
+            {
+                "title": "The Tolling Bell",
+                "author": "Katherine C. Epstein",
+                "publisher": "American Purpose",
+                "url": "https://www.americanpurpose.com/articles/the-tolling-bell/"
+            },
+            {
+                "title": "The Empty Brain",
+                "author": "Robert Epstein",
+                "publisher": "Aeon",
+                "url": "https://aeon.co/essays/your-brain-does-not-process-information-and-it-is-not-a-computer"
+            },
+            {
+                "title": "Our Uneasy Tranquility",
+                "author": "Heather Zeiger",
+                "publisher": "The New Atlantis",
+                "url": "https://www.thenewatlantis.com/publications/our-uneasy-tranquility"
+            }
+        ]
+    }
 }
