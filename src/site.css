@@ -206,6 +206,7 @@ a {
     filter: grayscale(0.5);
     cursor: default;
 }
+.project .stores .links,
 .project .stores .links a {
     display: inline-flex;
     align-items: center;
