@@ -73,7 +73,7 @@
             }
         }
     ], 
-    "articles": [
+    "posts": [
         {
             "title": "How Readup is Built",
             "date": "2021-12-10",

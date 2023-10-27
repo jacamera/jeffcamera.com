@@ -151,11 +151,11 @@ a {
     }
 }
 
-.article a {
+.post a {
     display: block;
     margin-bottom: 0.25rem;
 }
-.article small:not(:last-of-type)::after {
+.post small:not(:last-of-type)::after {
     content: " •";
 }
 
