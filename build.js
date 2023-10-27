@@ -38,6 +38,9 @@ for (let i = 2; i < process.argv.length; i++) {
     }
 }
 
+// Split output based on build configuration.
+options.outputPath = path.join(options.outputPath, options.debug ? 'debug' : 'release');
+
 // Helper functions.
 async function findTemplateFiles(dirPath, takeDir, filePaths = []) {
     for (const child of await fs.readdir(dirPath, { withFileTypes: true })) {
