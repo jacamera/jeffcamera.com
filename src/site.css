@@ -117,6 +117,9 @@ a {
 #index #lists > ol > li + li {
     margin-top: 1rem;
 }
+#index #lists > ol:last-child > li:last-child {
+    margin-bottom: 2rem;
+}
 @media (max-width: 899px) {
     #index #lists .project .stores .links span {
         display: none;
@@ -143,6 +146,9 @@ a {
     #index #lists {
         max-height: none;
         padding-right: 0;
+    }
+    #index #lists > ol:last-child > li:last-child {
+        margin-bottom: 0;
     }
     #index #profile {
         padding-left: 0;
