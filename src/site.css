@@ -45,15 +45,13 @@ a {
 
 #index {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto max-content auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-        "bio lists"
-        "profile lists";
+        "spacer bio lists"
+        "spacer profile lists";
     height: 100vh;
     column-gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
     overflow: hidden;
 }
 #index #bio > ol,
@@ -72,7 +70,6 @@ a {
     width: max-content;
     justify-self: center;
     overflow: hidden;
-    padding-left: 2rem;
 }
 #index #bio {
     grid-area: bio;
