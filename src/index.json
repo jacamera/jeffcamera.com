@@ -7,6 +7,11 @@
             "image": "/images/social/readup.svg"
         },
         {
+            "name": "Spotify",
+            "url": "https://open.spotify.com/user/tslvx0nubqjs18106bcdr8unu",
+            "image": "/images/social/spotify.svg"
+        },
+        {
             "name": "GitHub",
             "url": "https://github.com/jacamera",
             "image": "/images/social/github.svg"
