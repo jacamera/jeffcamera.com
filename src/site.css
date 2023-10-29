@@ -223,7 +223,9 @@ a {
     display: inline-flex;
     align-items: center;
 }
-.project .stores .links a + a,
+.project .stores .links a + a {
+    margin-left: 0.5rem;
+}
 .project .stores .links span {
     margin-left: 0.25rem;
 }
