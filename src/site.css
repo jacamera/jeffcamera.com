@@ -104,12 +104,21 @@ a {
 #index #socials > li + li {
     margin-left: 0.5rem;
 }
-#index #lists {
+#index main {
     grid-area: lists;
+    display: flex;
     align-self: center;
     max-height: 100vh;
     overflow: auto;
     padding-right: 2rem;
+}
+#index main::before {
+    content: "";
+    flex: 1 1 auto;
+    max-width: 4rem;
+}
+#index #lists {
+    flex: 2 1 auto;
 }
 #index #lists > ol > li + li {
     margin-top: 1rem;
@@ -140,9 +149,12 @@ a {
     #index #bio ol {
         margin-bottom: 0;
     }
-    #index #lists {
+    #index main {
         max-height: none;
         padding-right: 0;
+    }
+    #index main::before {
+        display: none;
     }
     #index #lists > ol:last-child > li:last-child {
         margin-bottom: 0;
