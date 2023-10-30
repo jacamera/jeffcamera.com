@@ -109,6 +109,7 @@ a {
     grid-area: lists;
     display: flex;
     align-self: center;
+    flex-wrap: wrap;
     max-height: 100vh;
     overflow: auto;
     padding-right: 2rem;
