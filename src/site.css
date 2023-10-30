@@ -77,6 +77,7 @@ a {
 }
 #index #stats > li {
     display: flex;
+    align-items: center;
 }
 #index #stats > li + li {
     margin-top: 0.5rem;
