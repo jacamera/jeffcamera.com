@@ -43,6 +43,10 @@ a {
     outline: #ccc auto 1px;
 }
 
+#icons {
+    display: none;
+}
+
 #index {
     display: grid;
     grid-template-columns: auto max-content auto;
