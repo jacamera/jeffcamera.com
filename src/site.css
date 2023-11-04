@@ -176,13 +176,13 @@ a {
     }
 }
 
-.article a,
-.post a {
+.article .meta,
+.post .meta {
     display: block;
-    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
 }
-.article small:not(:last-of-type)::after,
-.post small:not(:last-of-type)::after {
+.article .meta small:not(:last-of-type)::after,
+.post .meta small:not(:last-of-type)::after {
     content: " •";
 }
 

@@ -1,10 +1,14 @@
 <div class="project">
     <img class="logo" src="{{asset image}}" alt="{{name}} Logo" />
     {{# website}}
-    <a class="name" href="{{.}}" title="Website">{{../name}}</a>
+    <div class="name">
+        <a href="{{.}}" title="Website">{{../name}}</a>
+    </div>
     {{/ website}}
     {{^ website}}
-    <span class="name">{{name}}</span>
+    <div class="name">
+        <span>{{name}}</span>
+    </div>
     {{/ website}}
     <small class="description">{{description}}</small>
     {{# stores}}
