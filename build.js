@@ -5,6 +5,7 @@ import Handlebars from 'handlebars';
 // Get options from the command line arguments.
 const options = {
     assetVersionKey: 'v',
+    dataExtension: '.json',
     debug: false,
     outputPath: 'bin',
     partialsPath: 'src/_partials',
@@ -16,6 +17,9 @@ for (let i = 2; i < process.argv.length; i++) {
     switch (process.argv[i]) {
         case '--asset-version-key':
             options.assetVersionKey = process.argv[++i];
+            break;
+        case '--data-extension':
+            options.dataExtension = process.argv[++i];
             break;
         case '--debug':
             options.debug = true;
@@ -42,17 +46,6 @@ for (let i = 2; i < process.argv.length; i++) {
 options.outputPath = path.join(options.outputPath, options.debug ? 'debug' : 'release');
 
 // Helper functions.
-async function findTemplateFiles(dirPath, takeDir, filePaths = []) {
-    for (const child of await fs.readdir(dirPath, { withFileTypes: true })) {
-        const childPath = path.join(dirPath, child.name);
-        if (child.isDirectory() && (!takeDir || takeDir(child.name))) {
-            await findTemplateFiles(childPath, takeDir, filePaths);
-        } else if (child.isFile() && path.extname(child.name) === options.templateExtension) {
-            filePaths.push(childPath);
-        }
-    }
-    return filePaths;
-}
 function changeExtension(filePath, extension) {
     return filePath.substring(0, filePath.length - path.extname(filePath).length) + extension;
 }
@@ -64,12 +57,9 @@ async function createDirectories(filePath) {
 }
 
 // Asset helper.
-const
-    assetVersion = Date.now(),
-    assetPaths = new Set();
+const assetVersion = Date.now();
+
 Handlebars.registerHelper('asset', assetPath => {
-    // Store a reference in the set.
-    assetPaths.add(path.join(options.sourcePath, assetPath));
     // Return the path plus a version query string.
     assetPath = Handlebars.escapeExpression(path.posix.join(options.virtualDirectory, assetPath));
     return new Handlebars.SafeString(`${assetPath}?${options.assetVersionKey}=${assetVersion}`);
@@ -157,8 +147,41 @@ try {
     await fs.rm(options.outputPath, { recursive: true });
 } catch { }
 
+// Find and organize all the source files.
+const
+    partialTemplatePaths = new Set(),
+    fullTemplatePaths = new Set(),
+    dataPaths = new Set(),
+    contentPaths = new Set();
+
+async function getSourceFilePaths(dirPath) {
+    for (const child of await fs.readdir(dirPath, { withFileTypes: true })) {
+        const childPath = path.join(dirPath, child.name);
+        if (child.isDirectory()) {
+            await getSourceFilePaths(childPath);
+        } else if (child.isFile()) {
+            switch (path.extname(child.name)) {
+                case options.templateExtension:
+                    if (childPath.startsWith(path.join(options.partialsPath, path.sep))) {
+                        partialTemplatePaths.add(childPath);
+                    } else {
+                        fullTemplatePaths.add(childPath);
+                    }
+                    break;
+                case options.dataExtension:
+                    dataPaths.add(childPath);
+                    break;
+                default:
+                    contentPaths.add(childPath);
+                    break;
+            }
+        }
+    }
+}
+await getSourceFilePaths(options.sourcePath);
+
 // Load all the partial templates.
-for (const filePath of await findTemplateFiles(options.partialsPath)) {
+for (const filePath of partialTemplatePaths) {
     Handlebars.registerPartial(
         filePath.substring(
             options.partialsPath.length + 1,
@@ -169,23 +192,31 @@ for (const filePath of await findTemplateFiles(options.partialsPath)) {
 }
 
 // Find and render all the full templates.
-for (const filePath of await findTemplateFiles(options.sourcePath, dirName => dirName.length && dirName[0] !== '_')) {
-    const render = Handlebars.compile(await fs.readFile(filePath, 'utf8'));
+for (const filePath of fullTemplatePaths) {
+    const
+        render = Handlebars.compile(await fs.readFile(filePath, 'utf8')),
+        dataPath = changeExtension(filePath, '.json');
     let context = { ...globalContext };
-    try {
+    if (dataPaths.has(dataPath)) {
         context = {
             ...context,
-            ...JSON.parse(await fs.readFile(changeExtension(filePath, '.json'), 'utf8'))
+            ...JSON.parse(await fs.readFile(dataPath, 'utf8'))
         };
-    } catch { }
+        dataPaths.delete(dataPath);
+    }
     const outputFilePath = getOutputFilePath(changeExtension(filePath, '.html'));
     await createDirectories(outputFilePath);
     await fs.writeFile(outputFilePath, render(context));
 }
 
-// Copy all the assets to the output directory.
-for (const assetPath of assetPaths) {
-    const outputFilePath = getOutputFilePath(assetPath);
+// Any remaining data files that were not associated with a view should be treated as content.
+for (const dataPath of dataPaths) {
+    contentPaths.add(dataPath);
+}
+
+// Copy all the content files to the output directory.
+for (const contentPath of contentPaths) {
+    const outputFilePath = getOutputFilePath(contentPath);
     await createDirectories(outputFilePath);
-    await fs.copyFile(assetPath, outputFilePath);
+    await fs.copyFile(contentPath, outputFilePath);
 }
